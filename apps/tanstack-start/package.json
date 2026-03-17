@@ -10,7 +10,7 @@
     "format": "prettier --check . --ignore-path ../../.gitignore --ignore-path .prettierignore",
     "lint": "eslint --flag unstable_native_nodejs_ts_config",
     "typecheck": "tsc --noEmit",
-    "with-env": "dotenv -e ../../.env --"
+    "with-env": "dotenv -e .env -e ../../packages/db/.env -e ../../packages/auth/.env --"
   },
   "dependencies": {
     "@acme/api": "workspace:*",
@@ -46,6 +46,7 @@
     "@types/react": "catalog:react19",
     "@types/react-dom": "catalog:react19",
     "@vitejs/plugin-react": "catalog:",
+    "dotenv-cli": "catalog:",
     "eslint": "catalog:",
     "prettier": "catalog:",
     "tailwindcss": "catalog:",

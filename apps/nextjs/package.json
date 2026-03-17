@@ -10,7 +10,7 @@
     "lint": "eslint --flag unstable_native_nodejs_ts_config",
     "start": "pnpm with-env next start",
     "typecheck": "tsc --noEmit",
-    "with-env": "dotenv -e ../../.env --"
+    "with-env": "dotenv -e .env -e ../../packages/db/.env -e ../../packages/auth/.env --"
   },
   "dependencies": {
     "@acme/api": "workspace:*",
@@ -39,6 +39,7 @@
     "@types/node": "catalog:",
     "@types/react": "catalog:react19",
     "@types/react-dom": "catalog:react19",
+    "dotenv-cli": "catalog:",
     "eslint": "catalog:",
     "jiti": "^2.5.1",
     "prettier": "catalog:",
