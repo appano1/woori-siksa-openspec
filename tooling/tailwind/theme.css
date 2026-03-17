@@ -74,6 +74,78 @@
   --spacing: 0.25rem;
 
   /* ============================================================
+     Layer 2: Typography Semantic Tokens (mode-invariant)
+     ============================================================ */
+
+  /* Font sizes */
+  --text-display-lg: 2rem;        /* 32px */
+  --text-display: 1.75rem;        /* 28px */
+  --text-heading-lg: 1.5rem;      /* 24px */
+  --text-heading: 1.25rem;        /* 20px */
+  --text-heading-sm: 1.0625rem;   /* 17px */
+  --text-body-lg: 1rem;           /* 16px */
+  --text-body: 0.875rem;          /* 14px */
+  --text-body-sm: 0.8125rem;      /* 13px */
+  --text-caption: 0.75rem;        /* 12px */
+  --text-caption-sm: 0.6875rem;   /* 11px */
+  --text-score-lg: 1.5rem;        /* 24px */
+  --text-score: 1.25rem;          /* 20px */
+  --text-score-sm: 1rem;          /* 16px */
+  --text-button: 0.875rem;        /* 14px */
+  --text-label: 0.8125rem;        /* 13px */
+
+  /* Line heights */
+  --leading-display-lg: 1.15;
+  --leading-display: 1.2;
+  --leading-heading-lg: 1.3;
+  --leading-heading: 1.3;
+  --leading-heading-sm: 1.35;
+  --leading-body-lg: 1.6;
+  --leading-body: 1.6;
+  --leading-body-sm: 1.55;
+  --leading-caption: 1.45;
+  --leading-caption-sm: 1.45;
+  --leading-score-lg: 1.0;
+  --leading-score: 1.0;
+  --leading-score-sm: 1.0;
+  --leading-button: 1.0;
+  --leading-label: 1.45;
+
+  /* Letter spacing (Korean-safe) */
+  --tracking-display-lg: -0.02em;
+  --tracking-display: -0.02em;
+  --tracking-heading-lg: -0.01em;
+  --tracking-heading: -0.01em;
+  --tracking-heading-sm: -0.01em;
+  --tracking-body-lg: 0em;
+  --tracking-body: 0em;
+  --tracking-body-sm: 0em;
+  --tracking-caption: 0.01em;
+  --tracking-caption-sm: 0.012em;
+  --tracking-score-lg: -0.02em;
+  --tracking-score: -0.02em;
+  --tracking-score-sm: -0.015em;
+  --tracking-button: 0em;
+  --tracking-label: 0em;
+
+  /* Font weights */
+  --font-weight-display-lg: 800;
+  --font-weight-display: 700;
+  --font-weight-heading-lg: 700;
+  --font-weight-heading: 700;
+  --font-weight-heading-sm: 600;
+  --font-weight-body-lg: 400;
+  --font-weight-body: 400;
+  --font-weight-body-sm: 400;
+  --font-weight-caption: 400;
+  --font-weight-caption-sm: 500;
+  --font-weight-score-lg: 700;
+  --font-weight-score: 700;
+  --font-weight-score-sm: 600;
+  --font-weight-button: 500;
+  --font-weight-label: 500;
+
+  /* ============================================================
      Layer 2: Semantic Tokens — Dark Mode
      ============================================================ */
   @variant dark {
@@ -176,7 +248,7 @@
   --color-ring: var(--ring);
 
   /* Non-color tokens (preserved) */
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-pretendard);
   --font-mono: var(--font-geist-mono);
 
   --radius-sm: calc(var(--radius) - 4px);
@@ -193,10 +265,71 @@
   --shadow-xl: var(--shadow-xl);
   --shadow-2xl: var(--shadow-2xl);
 
-  --tracking-tighter: calc(var(--tracking-normal) - 0.05em);
-  --tracking-tight: calc(var(--tracking-normal) - 0.025em);
-  --tracking-normal: var(--tracking-normal);
-  --tracking-wide: calc(var(--tracking-normal) + 0.025em);
-  --tracking-wider: calc(var(--tracking-normal) + 0.05em);
-  --tracking-widest: calc(var(--tracking-normal) + 0.1em);
+  /* Typography: font-size utilities (text-display-lg, text-body, etc.) */
+  --text-display-lg: var(--text-display-lg);
+  --text-display: var(--text-display);
+  --text-heading-lg: var(--text-heading-lg);
+  --text-heading: var(--text-heading);
+  --text-heading-sm: var(--text-heading-sm);
+  --text-body-lg: var(--text-body-lg);
+  --text-body: var(--text-body);
+  --text-body-sm: var(--text-body-sm);
+  --text-caption: var(--text-caption);
+  --text-caption-sm: var(--text-caption-sm);
+  --text-score-lg: var(--text-score-lg);
+  --text-score: var(--text-score);
+  --text-score-sm: var(--text-score-sm);
+  --text-button: var(--text-button);
+  --text-label: var(--text-label);
+
+  /* Typography: line-height utilities (leading-display-lg, leading-body, etc.) */
+  --leading-display-lg: var(--leading-display-lg);
+  --leading-display: var(--leading-display);
+  --leading-heading-lg: var(--leading-heading-lg);
+  --leading-heading: var(--leading-heading);
+  --leading-heading-sm: var(--leading-heading-sm);
+  --leading-body-lg: var(--leading-body-lg);
+  --leading-body: var(--leading-body);
+  --leading-body-sm: var(--leading-body-sm);
+  --leading-caption: var(--leading-caption);
+  --leading-caption-sm: var(--leading-caption-sm);
+  --leading-score-lg: var(--leading-score-lg);
+  --leading-score: var(--leading-score);
+  --leading-score-sm: var(--leading-score-sm);
+  --leading-button: var(--leading-button);
+  --leading-label: var(--leading-label);
+
+  /* Typography: letter-spacing utilities (tracking-display-lg, tracking-body, etc.) */
+  --tracking-display-lg: var(--tracking-display-lg);
+  --tracking-display: var(--tracking-display);
+  --tracking-heading-lg: var(--tracking-heading-lg);
+  --tracking-heading: var(--tracking-heading);
+  --tracking-heading-sm: var(--tracking-heading-sm);
+  --tracking-body-lg: var(--tracking-body-lg);
+  --tracking-body: var(--tracking-body);
+  --tracking-body-sm: var(--tracking-body-sm);
+  --tracking-caption: var(--tracking-caption);
+  --tracking-caption-sm: var(--tracking-caption-sm);
+  --tracking-score-lg: var(--tracking-score-lg);
+  --tracking-score: var(--tracking-score);
+  --tracking-score-sm: var(--tracking-score-sm);
+  --tracking-button: var(--tracking-button);
+  --tracking-label: var(--tracking-label);
+
+  /* Typography: font-weight utilities (font-weight-display-lg, font-weight-body, etc.) */
+  --font-weight-display-lg: var(--font-weight-display-lg);
+  --font-weight-display: var(--font-weight-display);
+  --font-weight-heading-lg: var(--font-weight-heading-lg);
+  --font-weight-heading: var(--font-weight-heading);
+  --font-weight-heading-sm: var(--font-weight-heading-sm);
+  --font-weight-body-lg: var(--font-weight-body-lg);
+  --font-weight-body: var(--font-weight-body);
+  --font-weight-body-sm: var(--font-weight-body-sm);
+  --font-weight-caption: var(--font-weight-caption);
+  --font-weight-caption-sm: var(--font-weight-caption-sm);
+  --font-weight-score-lg: var(--font-weight-score-lg);
+  --font-weight-score: var(--font-weight-score);
+  --font-weight-score-sm: var(--font-weight-score-sm);
+  --font-weight-button: var(--font-weight-button);
+  --font-weight-label: var(--font-weight-label);
 }
