@@ -10,7 +10,7 @@
   --terracotta-400: oklch(0.69 0.17 38);
   --terracotta-500: oklch(0.65 0.19 38);
   --terracotta-600: oklch(0.58 0.18 38);
-  --terracotta-700: oklch(0.50 0.15 38);
+  --terracotta-700: oklch(0.5 0.15 38);
   --terracotta-800: oklch(0.43 0.12 38);
   --terracotta-900: oklch(0.37 0.09 38);
   --terracotta-950: oklch(0.27 0.07 38);
@@ -18,13 +18,13 @@
   /* Warm Gray (Hue 60°) */
   --warm-gray-50: oklch(0.98 0.005 60);
   --warm-gray-100: oklch(0.95 0.007 60);
-  --warm-gray-200: oklch(0.90 0.008 60);
+  --warm-gray-200: oklch(0.9 0.008 60);
   --warm-gray-300: oklch(0.83 0.008 60);
-  --warm-gray-400: oklch(0.70 0.008 60);
+  --warm-gray-400: oklch(0.7 0.008 60);
   --warm-gray-500: oklch(0.55 0.008 60);
   --warm-gray-600: oklch(0.45 0.008 60);
   --warm-gray-700: oklch(0.37 0.008 60);
-  --warm-gray-800: oklch(0.30 0.008 60);
+  --warm-gray-800: oklch(0.3 0.008 60);
   --warm-gray-900: oklch(0.22 0.006 60);
   --warm-gray-950: oklch(0.16 0.005 60);
 
@@ -45,7 +45,7 @@
   --muted-foreground: var(--warm-gray-500);
   --accent: var(--warm-gray-100);
   --accent-foreground: var(--terracotta-500);
-  --destructive: oklch(0.55 0.20 27);
+  --destructive: oklch(0.55 0.2 27);
   --destructive-foreground: oklch(1 0 0);
   --success: oklch(0.62 0.17 145);
   --success-foreground: oklch(1 0 0);
@@ -78,21 +78,21 @@
      ============================================================ */
 
   /* Font sizes */
-  --text-display-lg: 2rem;        /* 32px */
-  --text-display: 1.75rem;        /* 28px */
-  --text-heading-lg: 1.5rem;      /* 24px */
-  --text-heading: 1.25rem;        /* 20px */
-  --text-heading-sm: 1.0625rem;   /* 17px */
-  --text-body-lg: 1rem;           /* 16px */
-  --text-body: 0.875rem;          /* 14px */
-  --text-body-sm: 0.8125rem;      /* 13px */
-  --text-caption: 0.75rem;        /* 12px */
-  --text-caption-sm: 0.6875rem;   /* 11px */
-  --text-score-lg: 1.5rem;        /* 24px */
-  --text-score: 1.25rem;          /* 20px */
-  --text-score-sm: 1rem;          /* 16px */
-  --text-button: 0.875rem;        /* 14px */
-  --text-label: 0.8125rem;        /* 13px */
+  --text-display-lg: 2rem; /* 32px */
+  --text-display: 1.75rem; /* 28px */
+  --text-heading-lg: 1.5rem; /* 24px */
+  --text-heading: 1.25rem; /* 20px */
+  --text-heading-sm: 1.0625rem; /* 17px */
+  --text-body-lg: 1rem; /* 16px */
+  --text-body: 0.875rem; /* 14px */
+  --text-body-sm: 0.8125rem; /* 13px */
+  --text-caption: 0.75rem; /* 12px */
+  --text-caption-sm: 0.6875rem; /* 11px */
+  --text-score-lg: 1.5rem; /* 24px */
+  --text-score: 1.25rem; /* 20px */
+  --text-score-sm: 1rem; /* 16px */
+  --text-button: 0.875rem; /* 14px */
+  --text-label: 0.8125rem; /* 13px */
 
   /* Line heights */
   --leading-display-lg: 1.15;
@@ -105,10 +105,10 @@
   --leading-body-sm: 1.55;
   --leading-caption: 1.45;
   --leading-caption-sm: 1.45;
-  --leading-score-lg: 1.0;
-  --leading-score: 1.0;
-  --leading-score-sm: 1.0;
-  --leading-button: 1.0;
+  --leading-score-lg: 1;
+  --leading-score: 1;
+  --leading-score-sm: 1;
+  --leading-button: 1;
   --leading-label: 1.45;
 
   /* Letter spacing (Korean-safe) */
@@ -168,7 +168,7 @@
     --success: oklch(0.55 0.14 145);
     --success-foreground: oklch(1 0 0);
     --warning: oklch(0.68 0.13 85);
-    --warning-foreground: oklch(0.20 0.04 85);
+    --warning-foreground: oklch(0.2 0.04 85);
     --info: oklch(0.55 0.12 245);
     --info-foreground: oklch(1 0 0);
     --border: var(--warm-gray-700);
