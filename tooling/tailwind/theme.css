@@ -1,36 +1,61 @@
+/* ============================================================
+   Layer 1: Raw Palettes (mode-invariant)
+   ============================================================ */
 :root {
-  --background: oklch(0.9875 0.0045 314.8053);
-  --foreground: oklch(0.2277 0.0105 312.0161);
+  /* Warm Terracotta (Hue 38°) */
+  --terracotta-50: oklch(0.97 0.02 38);
+  --terracotta-100: oklch(0.93 0.04 38);
+  --terracotta-200: oklch(0.85 0.08 38);
+  --terracotta-300: oklch(0.77 0.13 38);
+  --terracotta-400: oklch(0.69 0.17 38);
+  --terracotta-500: oklch(0.65 0.19 38);
+  --terracotta-600: oklch(0.58 0.18 38);
+  --terracotta-700: oklch(0.50 0.15 38);
+  --terracotta-800: oklch(0.43 0.12 38);
+  --terracotta-900: oklch(0.37 0.09 38);
+  --terracotta-950: oklch(0.27 0.07 38);
+
+  /* Warm Gray (Hue 60°) */
+  --warm-gray-50: oklch(0.98 0.005 60);
+  --warm-gray-100: oklch(0.95 0.007 60);
+  --warm-gray-200: oklch(0.90 0.008 60);
+  --warm-gray-300: oklch(0.83 0.008 60);
+  --warm-gray-400: oklch(0.70 0.008 60);
+  --warm-gray-500: oklch(0.55 0.008 60);
+  --warm-gray-600: oklch(0.45 0.008 60);
+  --warm-gray-700: oklch(0.37 0.008 60);
+  --warm-gray-800: oklch(0.30 0.008 60);
+  --warm-gray-900: oklch(0.22 0.006 60);
+  --warm-gray-950: oklch(0.16 0.005 60);
+
+  /* ============================================================
+     Layer 2: Semantic Tokens — Light Mode
+     ============================================================ */
+  --background: var(--warm-gray-50);
+  --foreground: var(--warm-gray-900);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.2277 0.0105 312.0161);
+  --card-foreground: var(--warm-gray-900);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.2277 0.0105 312.0161);
-  --primary: oklch(0.5605 0.1911 350.0331);
+  --popover-foreground: var(--warm-gray-900);
+  --primary: var(--terracotta-500);
   --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.967 0.0106 316.4921);
-  --secondary-foreground: oklch(0.4536 0.0226 309.5036);
-  --muted: oklch(0.967 0.0106 316.4921);
-  --muted-foreground: oklch(0.5653 0.021 306.4429);
-  --accent: oklch(0.967 0.0106 316.4921);
-  --accent-foreground: oklch(0.5605 0.1911 350.0331);
-  --destructive: oklch(0.6368 0.2078 25.3313);
+  --secondary: var(--warm-gray-100);
+  --secondary-foreground: var(--warm-gray-700);
+  --muted: var(--warm-gray-100);
+  --muted-foreground: var(--warm-gray-500);
+  --accent: var(--warm-gray-100);
+  --accent-foreground: var(--terracotta-500);
+  --destructive: oklch(0.55 0.20 27);
   --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.9419 0.016 310.0997);
+  --success: oklch(0.62 0.17 145);
+  --success-foreground: oklch(1 0 0);
+  --warning: oklch(0.75 0.16 85);
+  --warning-foreground: oklch(0.25 0.05 85);
+  --info: oklch(0.62 0.14 245);
+  --info-foreground: oklch(1 0 0);
+  --border: var(--warm-gray-200);
   --input: oklch(1 0 0);
-  --ring: oklch(0.5605 0.1911 350.0331);
-  --chart-1: oklch(0.5605 0.1911 350.0331);
-  --chart-2: oklch(0.6747 0.1492 345.9482);
-  --chart-3: oklch(0.7729 0.1045 344.4709);
-  --chart-4: oklch(0.8625 0.0636 341.4088);
-  --chart-5: oklch(0.9411 0.0261 343.2843);
-  --sidebar: oklch(0.967 0.0106 316.4921);
-  --sidebar-foreground: oklch(0.4536 0.0226 309.5036);
-  --sidebar-primary: oklch(0.5605 0.1911 350.0331);
-  --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.9419 0.016 310.0997);
-  --sidebar-accent-foreground: oklch(0.5605 0.1911 350.0331);
-  --sidebar-border: oklch(0.9155 0.0235 310.6964);
-  --sidebar-ring: oklch(0.5605 0.1911 350.0331);
+  --ring: var(--terracotta-500);
   --radius: 0.75rem;
   --shadow-2xs: 0px 2px 10px 0px hsl(0 0% 0% / 0.03);
   --shadow-xs: 0px 2px 10px 0px hsl(0 0% 0% / 0.03);
@@ -48,39 +73,35 @@
   --tracking-normal: 0rem;
   --spacing: 0.25rem;
 
+  /* ============================================================
+     Layer 2: Semantic Tokens — Dark Mode
+     ============================================================ */
   @variant dark {
-    --background: oklch(0.1836 0.0111 311.9111);
-    --foreground: oklch(0.9788 0.0057 308.3962);
-    --card: oklch(0.1836 0.0111 311.9111);
-    --card-foreground: oklch(0.9788 0.0057 308.3962);
-    --popover: oklch(0.1836 0.0111 311.9111);
-    --popover-foreground: oklch(0.9788 0.0057 308.3962);
-    --primary: oklch(0.6747 0.1492 345.9482);
-    --primary-foreground: oklch(0.1836 0.0111 311.9111);
-    --secondary: oklch(0.2551 0.0142 310.7968);
-    --secondary-foreground: oklch(0.721 0.0184 308.1777);
-    --muted: oklch(0.2551 0.0142 310.7968);
-    --muted-foreground: oklch(0.6288 0.0177 309.9946);
-    --accent: oklch(0.2551 0.0142 310.7968);
-    --accent-foreground: oklch(0.6747 0.1492 345.9482);
-    --destructive: oklch(0.3958 0.1331 25.723);
+    --background: var(--warm-gray-950);
+    --foreground: var(--warm-gray-50);
+    --card: var(--warm-gray-950);
+    --card-foreground: var(--warm-gray-50);
+    --popover: var(--warm-gray-950);
+    --popover-foreground: var(--warm-gray-50);
+    --primary: var(--terracotta-400);
+    --primary-foreground: var(--warm-gray-950);
+    --secondary: var(--warm-gray-800);
+    --secondary-foreground: var(--warm-gray-300);
+    --muted: var(--warm-gray-800);
+    --muted-foreground: var(--warm-gray-400);
+    --accent: var(--warm-gray-800);
+    --accent-foreground: var(--terracotta-400);
+    --destructive: oklch(0.45 0.15 27);
     --destructive-foreground: oklch(1 0 0);
-    --border: oklch(0.2941 0.0175 310.1142);
-    --input: oklch(0.2551 0.0142 310.7968);
-    --ring: oklch(0.6747 0.1492 345.9482);
-    --chart-1: oklch(0.6747 0.1492 345.9482);
-    --chart-2: oklch(0.5605 0.1911 350.0331);
-    --chart-3: oklch(0.4988 0.1668 350);
-    --chart-4: oklch(0.4373 0.1428 349.7487);
-    --chart-5: oklch(0.3738 0.1177 349.3988);
-    --sidebar: oklch(0.2103 0.0107 311.9806);
-    --sidebar-foreground: oklch(0.721 0.0184 308.1777);
-    --sidebar-primary: oklch(0.6747 0.1492 345.9482);
-    --sidebar-primary-foreground: oklch(0.1836 0.0111 311.9111);
-    --sidebar-accent: oklch(0.2551 0.0142 310.7968);
-    --sidebar-accent-foreground: oklch(0.6747 0.1492 345.9482);
-    --sidebar-border: oklch(0.2941 0.0175 310.1142);
-    --sidebar-ring: oklch(0.6747 0.1492 345.9482);
+    --success: oklch(0.55 0.14 145);
+    --success-foreground: oklch(1 0 0);
+    --warning: oklch(0.68 0.13 85);
+    --warning-foreground: oklch(0.20 0.04 85);
+    --info: oklch(0.55 0.12 245);
+    --info-foreground: oklch(1 0 0);
+    --border: var(--warm-gray-700);
+    --input: var(--warm-gray-800);
+    --ring: var(--terracotta-400);
     --radius: 0.75rem;
     --shadow-2xs: 0px 2px 10px 0px hsl(0 0% 0% / 0.1);
     --shadow-xs: 0px 2px 10px 0px hsl(0 0% 0% / 0.1);
@@ -98,7 +119,36 @@
   }
 }
 
+/* ============================================================
+   Layer 3: Tailwind Utility Mapping
+   ============================================================ */
 @theme inline {
+  /* Raw palette utilities */
+  --color-terracotta-50: var(--terracotta-50);
+  --color-terracotta-100: var(--terracotta-100);
+  --color-terracotta-200: var(--terracotta-200);
+  --color-terracotta-300: var(--terracotta-300);
+  --color-terracotta-400: var(--terracotta-400);
+  --color-terracotta-500: var(--terracotta-500);
+  --color-terracotta-600: var(--terracotta-600);
+  --color-terracotta-700: var(--terracotta-700);
+  --color-terracotta-800: var(--terracotta-800);
+  --color-terracotta-900: var(--terracotta-900);
+  --color-terracotta-950: var(--terracotta-950);
+
+  --color-warm-gray-50: var(--warm-gray-50);
+  --color-warm-gray-100: var(--warm-gray-100);
+  --color-warm-gray-200: var(--warm-gray-200);
+  --color-warm-gray-300: var(--warm-gray-300);
+  --color-warm-gray-400: var(--warm-gray-400);
+  --color-warm-gray-500: var(--warm-gray-500);
+  --color-warm-gray-600: var(--warm-gray-600);
+  --color-warm-gray-700: var(--warm-gray-700);
+  --color-warm-gray-800: var(--warm-gray-800);
+  --color-warm-gray-900: var(--warm-gray-900);
+  --color-warm-gray-950: var(--warm-gray-950);
+
+  /* Semantic utilities */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -115,23 +165,17 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
 
+  /* Non-color tokens (preserved) */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
