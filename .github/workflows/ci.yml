@@ -29,7 +29,10 @@ jobs:
 
       - name: Copy env
         shell: bash
-        run: cp .env.example .env
+        run: |
+          cp apps/tanstack-start/.env.example apps/tanstack-start/.env
+          cp packages/auth/.env.example packages/auth/.env
+          cp packages/db/.env.example packages/db/.env
 
       - name: Lint
         run: pnpm lint && pnpm lint:ws
