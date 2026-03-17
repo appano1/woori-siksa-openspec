@@ -12,8 +12,6 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   updates: {
     fallbackToCacheTimeout: 0,
   },
-  newArchEnabled: true,
-  assetBundlePatterns: ["**/*"],
   ios: {
     bundleIdentifier: "your.bundle.identifier",
     supportsTablet: true,
@@ -28,7 +26,6 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       foregroundImage: "./assets/icon-light.png",
       backgroundColor: "#1F104A",
     },
-    edgeToEdgeEnabled: true,
   },
   extra: {
     eas: {
@@ -38,7 +35,6 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   experiments: {
     tsconfigPaths: true,
     typedRoutes: true,
-    reactCanary: true,
     reactCompiler: true,
   },
   plugins: [
