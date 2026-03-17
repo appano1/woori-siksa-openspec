@@ -26,7 +26,6 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       foregroundImage: "./assets/icon-light.png",
       backgroundColor: "#1F104A",
     },
-    edgeToEdgeEnabled: true,
   },
   extra: {
     eas: {
