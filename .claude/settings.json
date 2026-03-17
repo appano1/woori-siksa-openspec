@@ -1,11 +1,5 @@
 {
   "permissions": {
-    "deny": [
-      "Read(.env)",
-      "Edit(.env)"
-    ]
-  },
-  "enabledPlugins": {
-    "upgrading-expo@expo-plugins": true
+    "deny": ["Read(.env)", "Edit(.env)"]
   }
 }
