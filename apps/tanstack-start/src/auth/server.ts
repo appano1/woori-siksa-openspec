@@ -1,4 +1,5 @@
-import { reactStartCookies } from "better-auth/react-start";
+import type { BetterAuthPlugin } from "better-auth";
+import { tanstackStartCookies } from "better-auth/tanstack-start";
 
 import { initAuth } from "@acme/auth";
 
@@ -12,5 +13,5 @@ export const auth = initAuth({
   discordClientId: env.AUTH_DISCORD_ID,
   discordClientSecret: env.AUTH_DISCORD_SECRET,
 
-  extraPlugins: [reactStartCookies()],
+  extraPlugins: [tanstackStartCookies() as BetterAuthPlugin],
 });
